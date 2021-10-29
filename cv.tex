@@ -1,6 +1,7 @@
 \documentclass{article}
 %\usepackage[a4paper,total={6in,8in}]{geometry}
 \usepackage[a4paper,left=26mm,top=36mm,right=26mm,bottom=15mm]{geometry}
+
 %https://tex.stackexchange.com/questions/161877/too-many-white-space-in-bottom-of-the-pages
 \usepackage[usenames, dvipsnames]{color}
 %https://www.sharelatex.com/learn/Using_colours_in_LaTeX
@@ -13,9 +14,15 @@
 %\usepackage{enumitem}
 %https://tex.stackexchange.com/questions/43743/how-to-reduce-line-space-leading-within-an-enumerate-environment
 \usepackage{graphicx}
+\usepackage{longfbox}
+\makeatletter
+\newdimen\@tempdimd
+\makeatother
 \graphicspath{ {./images/} }
 
+
 \begin{document}
+
 	\pagenumbering{gobble}
 	\title{\Huge{\vspace{-3.5cm} \color{NavyBlue}Nikolaos Strongioglou } \\ \small{\textbf{Date of birth}: 21/09/1987\\
 			\textbf{Mobile}:+41(0)787042239\\
@@ -51,32 +58,33 @@
 
 	\section*{\color{NavyBlue}Professional Experience}
 	\vspace{-0.5cm}	
+	\fboxset{rounded,border-color=black,background-color=\#b1bdb4}%
 	{\color{NavyBlue}\hrulefill}
 	
 	%https://en.wikibooks.org/wiki/LaTeX/Tables
 	\begin{longtable}{r  p{12cm}}
 			\small May 2020 - Present  & \textbf{\large Software Engineer at 1PlusX} \textit{\footnotesize Zurich, Switzerland} \newline
 		DMP platform. Data consolidation team. Focus on providing multi-dimensional batch and real-time user profiling and tracking. \newline
-	    Scala, Go, Python, Typescript, Angular 2+, Redux, Akka, Spark, Luigi, AWS(EMR, ECS, EC2, ECR, RDS, S3, CloudWatch), Kafka, Docker, Terraform, Packer, Grafana, InfluxDB, Couchbase, DynamoDB, PostgreSQL \\ [1ex] 
+		\lfbox{Scala} \lfbox{Go} \lfbox{Python} \lfbox{Typescript} \lfbox{Angular 2+} \lfbox{Redux} \lfbox{Akka} \lfbox{Spark} \lfbox{Luigi} \lfbox{AWS} \lfbox{EMR} \lfbox{ECS} \lfbox{EC2} \lfbox{ECR} \lfbox{RDS} \lfbox{S3} \lfbox{CloudWatch} \lfbox{Kafka} \lfbox{Docker} \lfbox{Terraform} \lfbox{Packer} \lfbox{Grafana} \lfbox{InfluxDB} \lfbox{Couchbase} \lfbox{DynamoDB} \lfbox{PostgreSQL} \\ [1ex] 
 		\small March 2019 - May 2020  & \textbf{\large Software Engineer at Veezoo AG} \textit{\footnotesize Zurich, Switzerland} \newline
 		NLP platform providing analytics through a variety of corporate data source integrations - namely Oracle, MySQL, PostgreSQL, Salesforce, IBM DB2, Hadoop, SAP HANA - using a QA interface.\newline
-		\textit{\textbf{Technology stack}}: Scala, Play, Apache Jena, MySQL, PostgreSQL, Solr, Haskell, Docker, Kubernetes. \\ [1ex] 
+		\lfbox{Scala} \lfbox{Play} \lfbox{Apache Jena} \lfbox{MySQL} \lfbox{PostgreSQL} \lfbox{Solr} \lfbox{Haskell} \lfbox{Docker} \lfbox{Kubernetes} \\ [1ex] 
 		
 		\small April 2017 - March 2019  & \textbf{\large Software Engineer at Locatee AG} \textit{\footnotesize Zurich, Switzerland} \newline 
 		Analytics platform providing hyperlocation, real-time workspace occupancy insights and predictive APIs through geospatial data scraping (SNMP protocol). \newline
-		\textit{\textbf{Technology stack}}: Java 8, Spring Core, MySQL, InfluxDB, Tableau, Neo4J, Kafka, Python, Jupyter, Pandas, Docker. \\ [1ex]
+		\lfbox{Java 8} \lfbox{Spring Core} \lfbox{MySQL} \lfbox{InfluxDB} \lfbox{Tableau} \lfbox{Neo4J} \lfbox{Kafka} \lfbox{Python} \lfbox{Jupyter} \lfbox{Pandas} \lfbox{Docker} \\ [1ex]
 		
 		\small October 2014 - March 2017  & \textbf{\large Software Engineer at Upstream Systems SA} \textit{\footnotesize Athens, Greece} \newline 
 		Design and development of a fully distributed, fault-tolerant, modular system hosting the company's core CRM platform. The implementation included a multitude of APIs for data streaming and job scheduling accommodating thousands to millions of transactions daily. \newline
-		\textit{\textbf{Technology stack}}: Java 8, Spring Core, Spring Boot, Spring JPA, TestNG, Rabbit MQ, PostgreSQL, EhCache, Guava, Quartz, Flyway, Hibernate, Elasticsearch, Camel, Kafka, Spark, Redis, Docker, Ansible. \\ [1ex]
+		\lfbox{Java 8} \lfbox{Spring Core} \lfbox{Spring Boot} \lfbox{Spring JPA} \lfbox{TestNG} \lfbox{Rabbit MQ} \lfbox{PostgreSQL} \lfbox{EhCache} \lfbox{Guava} \lfbox{Quartz} \lfbox{Flyway} \lfbox{Hibernate} \lfbox{Elasticsearch} \lfbox{Camel} \lfbox{Kafka} \lfbox{Spark} \lfbox{Redis} \lfbox{Docker} \lfbox{Ansible} \\ [1ex]
 		
 		\small June 2014 - September 2014 & \textbf{\large Software Engineer at Accenture} \textit{\footnotesize Athens, Greece} \newline
 		Provisioning and mediation over Oracle databases and mobile telecom software.\newline
-		\textit{\textbf{Technology stack}}: TOAD, SQL Developer, WebLogic. \\ [1ex]
+		\lfbox{TOAD} \lfbox{SQL Developer} \lfbox{WebLogic} \\ [1ex]
 		
 		\small January 2012 - November 2013 & \textbf{\large Freelancing software and web developer} \textit{\footnotesize Athens, Greece} \newline
 		Software development on static content pages and web applications.\newline
-		\textit{\textbf{Technology stack}}: HTML / CSS, Bootstrap, Javascript, jQuery, Angular JS. \\ [1ex]
+		\lfbox{HTML / CSS} \lfbox{Bootstrap} \lfbox{Javascript} \lfbox{jQuery} \lfbox{Angular JS} \\ [1ex]
 		
 		\small October 2010 - February 2011 & \textbf{\large IT support at OTE} \textit{\footnotesize Athens, Greece} \newline
 		Department of IT support of OTE . \\ 

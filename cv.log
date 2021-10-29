@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.8.7)  29 OCT 2021 23:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.8.7)  29 OCT 2021 23:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -289,30 +289,198 @@ Package graphics Info: Driver file: pdftex.def on input line 105.
 \Gin@req@height=\dimen157
 \Gin@req@width=\dimen158
 )
+(/usr/share/texlive/texmf-dist/tex/latex/longfbox/longfbox.sty
+Package: longfbox 2015/12/01, Daan Leijen, Provides long fbox that can break ov
+er pages
+
+(/usr/share/texlive/texmf-dist/tex/latex/options/options.sty
+Package: options 2015/03/01, Daan Leijen, Provides convenient path-value (or ke
+y-value) options
+
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count270
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+LaTeX Info: Redefining \color on input line 709.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+\opt@nesting=\count271
+\opt@idx=\count272
+\opt@choiceord=\count273
+)
+(/usr/share/texlive/texmf-dist/tex/latex/longfbox/longbox.sty
+Package: longbox 2015/12/01, Daan Leijen, Provides basic longbox that can break
+ over pages
+
+(/usr/share/texlive/texmf-dist/tex/latex/mdwtools/footnote.sty
+Package: footnote 1997/01/28 1.13 Save footnotes around boxes
+\fn@notes=\box95
+\fn@width=\dimen159
+)
+\lb@prevdepth=\skip56
+\lb@freevspace=\skip57
+\lb@headbox=\box96
+\lb@savebox=\box97
+\lb@mainbox=\box98
+\lb@usevbox=\count274
+\lb@width=\skip58
+\lb@height=\skip59
+\lb@skiptop=\skip60
+\lb@skipright=\skip61
+\lb@skipbottom=\skip62
+\lb@skipleft=\skip63
+\lb@skipbreaktop=\skip64
+\lb@skipbreakbottom=\skip65
+\lb@outerwidth=\skip66
+\lb@extrasplit=\skip67
+\lb@textalign=\count275
+\lb@baseline=\count276
+\lb@neededvspace=\skip68
+\lb@splitheight=\skip69
+\lb@insurance=\skip70
+\/longbox/@part-height=\skip71
+\/longbox/@part-width=\skip72
+\/longbox/@part-depth=\skip73
+\/longbox/@content-box-height=\skip74
+\/longbox/@content-box-width=\skip75
+\/longbox/@content-box-depth=\skip76
+\/longbox/@breakat-previous=\skip77
+\/longbox/@lower=\skip78
+\/longbox/split-minimum=\skip79
+\/longbox/split-badness=\skip80
+\/longbox/raise=\skip81
+\/longbox/height=\skip82
+\/longbox/width=\skip83
+\/longbox/outer-height=\skip84
+\/longbox/outer-width=\skip85
+\/longbox/skip-top=\skip86
+\/longbox/skip-right=\skip87
+\/longbox/skip-bottom=\skip88
+\/longbox/skip-left=\skip89
+\/longbox/skip-break-bottom=\skip90
+\/longbox/skip-break-top=\skip91
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pict2e/pict2e.sty
+Package: pict2e 2019/08/20 v0.3c Improved picture commands (HjG,RN,JT)
+
+(/usr/share/texlive/texmf-dist/tex/latex/pict2e/pict2e.cfg
+File: pict2e.cfg 2016/02/05 v0.1u pict2e configuration for teTeX/TeXLive
+)
+Package pict2e Info: Driver file: pdftex.def on input line 119.
+Package pict2e Info: Driver file for pict2e: p2e-pdftex.def on input line 121.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pict2e/p2e-pdftex.def
+File: p2e-pdftex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
+)
+\pIIe@GRAPH=\toks17
+\@arclen=\dimen160
+\@arcrad=\dimen161
+\@tempdimd=\dimen162
+)
+(/usr/share/texlive/texmf-dist/tex/latex/ellipse/ellipse.sty
+Package: ellipse 2004/11/05 v1.0 .dtx ellipse file
+)
+\fbox@oct=\count277
+\fbox@quad=\count278
+\fbox@diaq=\count279
+\fbox@sign=\count280
+\fbox@anglestart=\skip92
+\fbox@angleend=\skip93
+\fbox@dash=\skip94
+\fbox@dashskip=\skip95
+\fbox@anglecur=\skip96
+\fbox@dashangle=\skip97
+\fbox@dashskipangle=\skip98
+\fbox@delta=\skip99
+\fbox@from=\skip100
+\fbox@to=\skip101
+\/fbox/padding-top=\skip102
+\/fbox/padding-right=\skip103
+\/fbox/padding-bottom=\skip104
+\/fbox/padding-left=\skip105
+\/fbox/padding-break-top=\skip106
+\/fbox/padding-break-bottom=\skip107
+\/fbox/margin-top=\skip108
+\/fbox/margin-right=\skip109
+\/fbox/margin-bottom=\skip110
+\/fbox/margin-left=\skip111
+\/fbox/margin-break-top=\skip112
+\/fbox/margin-break-bottom=\skip113
+\/fbox/border-top-width=\skip114
+\/fbox/border-right-width=\skip115
+\/fbox/border-bottom-width=\skip116
+\/fbox/border-left-width=\skip117
+\/fbox/border-break-top-width=\skip118
+\/fbox/border-break-bottom-width=\skip119
+\/fbox/@lower=\skip120
+\/fbox/@padding-box-height=\skip121
+\/fbox/@padding-box-depth=\skip122
+\/fbox/@padding-box-width=\skip123
+\/fbox/@border-box-width=\skip124
+\/fbox/@border-box-height=\skip125
+\/fbox/@border-box-depth=\skip126
+\/fbox/@border-top-left-radius-x=\skip127
+\/fbox/@border-top-right-radius-x=\skip128
+\/fbox/@border-bottom-left-radius-x=\skip129
+\/fbox/@border-bottom-right-radius-x=\skip130
+\/fbox/@border-top-left-radius-y=\skip131
+\/fbox/@border-top-right-radius-y=\skip132
+\/fbox/@border-bottom-left-radius-y=\skip133
+\/fbox/@border-bottom-right-radius-y=\skip134
+\/fbox/@border-top-left-ix=\skip135
+\/fbox/@border-top-left-iy=\skip136
+\/fbox/@border-top-right-ix=\skip137
+\/fbox/@border-top-right-iy=\skip138
+\/fbox/@border-bottom-left-ix=\skip139
+\/fbox/@border-bottom-left-iy=\skip140
+\/fbox/@border-bottom-right-ix=\skip141
+\/fbox/@border-bottom-right-iy=\skip142
+\/fbox/@border-top-left-phi=\skip143
+\/fbox/@border-top-right-phi=\skip144
+\/fbox/@border-bottom-left-phi=\skip145
+\/fbox/@border-bottom-right-phi=\skip146
+)
+\@tempdimd=\dimen163
+
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count270
-\l__pdf_internal_box=\box95
+\l__kernel_color_stack_int=\count281
+\l__pdf_internal_box=\box99
 )
 (./cv.aux)
 \openout1 = `cv.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -350,17 +518,17 @@ LaTeX Font Info:    ... okay on input line 18.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count271
-\scratchdimen=\dimen159
-\scratchbox=\box96
-\nofMPsegments=\count272
-\nofMParguments=\count273
-\everyMPshowfont=\toks17
-\MPscratchCnt=\count274
-\MPscratchDim=\dimen160
-\MPnumerator=\count275
-\makeMPintoPDFobject=\count276
-\everyMPtoPDFconversion=\toks18
+\scratchcounter=\count282
+\scratchdimen=\dimen164
+\scratchbox=\box100
+\nofMPsegments=\count283
+\nofMParguments=\count284
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count285
+\MPscratchDim=\dimen165
+\MPnumerator=\count286
+\makeMPintoPDFobject=\count287
+\everyMPtoPDFconversion=\toks19
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -370,8 +538,8 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\AtBeginShipoutBox=\box97
-Package hyperref Info: Link coloring OFF on input line 18.
+\AtBeginShipoutBox=\box101
+Package hyperref Info: Link coloring OFF on input line 24.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -382,89 +550,127 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count277
+\c@section@level=\count288
 )
-LaTeX Info: Redefining \ref on input line 18.
-LaTeX Info: Redefining \pageref on input line 18.
-LaTeX Info: Redefining \nameref on input line 18.
+LaTeX Info: Redefining \ref on input line 24.
+LaTeX Info: Redefining \pageref on input line 24.
+LaTeX Info: Redefining \nameref on input line 24.
 
 (./cv.out) (./cv.out)
 \@outlinefile=\write3
 \openout3 = `cv.out'.
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 28.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 28.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 28.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 39.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 39.
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--40
+
+Package xcolor Warning: Incompatible color definition on input line 35.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 35.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 35.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 35.
+
+Package xcolor Warning: Incompatible color definition on input line 41.
+
+
+Package xcolor Warning: Incompatible color definition on input line 43.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 46.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 46.
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--47
 []\OT1/cmr/m/n/9 September
  []
 
 
-Overfull \hbox (41.44252pt too wide) in alignment at lines 57--83
+Package xcolor Warning: Incompatible color definition on input line 59.
+
+
+Package xcolor Warning: Incompatible color definition on input line 62.
+
+
+Underfull \hbox (badness 3260) in paragraph at lines 73--75
+[] [] [] [] [] [] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--79
+[] [] [] [] [] []
+ []
+
+
+Overfull \hbox (41.44252pt too wide) in alignment at lines 65--91
  [] [] 
  []
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (22.36156pt too wide) in paragraph at lines 93--94
+
+Package xcolor Warning: Incompatible color definition on input line 96.
+
+
+Package xcolor Warning: Incompatible color definition on input line 98.
+
+
+Overfull \hbox (22.36156pt too wide) in paragraph at lines 101--102
 []\OT1/cmr/m/n/10 DSL de-sign for data ag-gre-ga-tion/mapping/parsing 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 105--106
+Underfull \hbox (badness 10000) in paragraph at lines 113--114
 []\OT1/cmr/m/n/10 QA Au-toma-tion frame-work (Se-le-nium,
  []
 
 
-Underfull \hbox (badness 6876) in paragraph at lines 106--107
+Underfull \hbox (badness 6876) in paragraph at lines 114--115
 []\OT1/cmr/m/n/10 Naive cus-tomer rec-om-men-da-tion en-gine
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 121.
+
+Package xcolor Warning: Incompatible color definition on input line 124.
+
+
+Package xcolor Warning: Incompatible color definition on input line 126.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 129.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.121 \end{document}
+l.129 \end{document}
                      [2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 121.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 129.
  (./cv.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 121.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 121.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 129.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 129.
 Package rerunfilecheck Info: File `cv.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 121.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 129.
  ) 
 Here is how much of TeX's memory you used:
- 6047 strings out of 483140
- 92489 string characters out of 5965152
- 370259 words of memory out of 5000000
- 20967 multiletter control sequences out of 15000+600000
- 538891 words of font info for 45 fonts, out of 8000000 for 9000
+ 9635 strings out of 483140
+ 189339 string characters out of 5965152
+ 622329 words of memory out of 5000000
+ 24519 multiletter control sequences out of 15000+600000
+ 538532 words of font info for 44 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 34i,8n,29p,333b,410s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,16n,52p,945b,583s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/niko/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600p
 k></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmti8.pfb>
-Output written on cv.pdf (2 pages, 114305 bytes).
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmti8.pfb>
+Output written on cv.pdf (2 pages, 120237 bytes).
 PDF statistics:
- 68 PDF objects out of 1000 (max. 8388607)
- 54 compressed objects within 1 object stream
+ 64 PDF objects out of 1000 (max. 8388607)
+ 51 compressed objects within 1 object stream
  9 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
