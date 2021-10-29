@@ -1,0 +1,121 @@
+\documentclass{article}
+%\usepackage[a4paper,total={6in,8in}]{geometry}
+\usepackage[a4paper,left=26mm,top=36mm,right=26mm,bottom=15mm]{geometry}
+%https://tex.stackexchange.com/questions/161877/too-many-white-space-in-bottom-of-the-pages
+\usepackage[usenames, dvipsnames]{color}
+%https://www.sharelatex.com/learn/Using_colours_in_LaTeX
+\usepackage{hyperref}
+%https://www.sharelatex.com/learn/Hyperlinks
+\usepackage{longtable}
+%https://tex.stackexchange.com/questions/26462/make-a-table-span-multiple-pages
+\usepackage{multicol}
+%https://www.sharelatex.com/learn/Multiple_columns
+%\usepackage{enumitem}
+%https://tex.stackexchange.com/questions/43743/how-to-reduce-line-space-leading-within-an-enumerate-environment
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+\begin{document}
+	\pagenumbering{gobble}
+	\title{\Huge{\vspace{-3.5cm} \color{NavyBlue}Nikolaos Strongioglou } \\ \small{\textbf{Date of birth}: 21/09/1987\\
+			\textbf{Mobile}:+41(0)787042239\\
+			\textbf{Address}: Salerstrasse 16, 8050, Zurich\\
+			\href{http://tonyflow.github.io/}{webpage} * \href{https://www.linkedin.com/in/nikolaos-strongioglou/}{linkedIn} * \href{https://github.com/tonyflow}{github} * \href{https://www.hackerrank.com/nikostrongioglou}{hackerRank}* \href{https://leetcode.com/nikostr/}{leetcode}* \href{mailto:nikos.strongioglou@gmail.com}{email}
+		} }
+	\author{}
+	\date{}
+	\maketitle
+	
+	\vspace{-1.4cm}
+	\noindent
+	I am a software engineer passionate about high-volume distributed architectures, modular performant systems , clean designs and elegant algorithms. I revel in being a member of teams composed of smart, self-motivated and inspired people who consider Computer Science as a means of changing the world.
+
+    %#3890A4
+	\section*{\color{NavyBlue} Education}
+	\vspace{-0.5cm}
+	{\color{NavyBlue} \hrulefill}
+	
+	\subsection*{Degrees}
+	\begin{tabular}{p{2cm}  p{12cm}}
+		\small September 2013 & \textbf{B.Sc. in Computer Science} \newline
+			Department of Computer Science, National and Kapodistrian University of Athens - 7.49/10 or Upper Second-Class Honours
+	\end{tabular}
+
+	\subsection*{Languages}
+		\begin{tabular}{p{2cm}  p{12cm}}
+			Greek & Native \\
+			English & Certificate of Proficiency in English, University of Cambridge, Grade A \newline
+							Certificate of Proficiency in English, University of Michigan, Honors \\
+			French & Diplome d’etudes en langue Francaise (DELF)
+		\end{tabular}
+
+	\section*{\color{NavyBlue}Professional Experience}
+	\vspace{-0.5cm}	
+	{\color{NavyBlue}\hrulefill}
+	
+	%https://en.wikibooks.org/wiki/LaTeX/Tables
+	\begin{longtable}{r  p{12cm}}
+			\small May 2020 - Present  & \textbf{\large Software Engineer at 1PlusX} \textit{\footnotesize Zurich, Switzerland} \newline
+		DMP platform. Data consolidation team. Focus on providing multi-dimensional batch and real-time user profiling and tracking. \newline
+	    Scala, Go, Python, Typescript, Angular 2+, Redux, Akka, Spark, Luigi, AWS(EMR, ECS, EC2, ECR, RDS, S3, CloudWatch), Kafka, Docker, Terraform, Packer, Grafana, InfluxDB, Couchbase, DynamoDB, PostgreSQL \\ [1ex] 
+		\small March 2019 - May 2020  & \textbf{\large Software Engineer at Veezoo AG} \textit{\footnotesize Zurich, Switzerland} \newline
+		NLP platform providing analytics through a variety of corporate data source integrations - namely Oracle, MySQL, PostgreSQL, Salesforce, IBM DB2, Hadoop, SAP HANA - using a QA interface.\newline
+		\textit{\textbf{Technology stack}}: Scala, Play, Apache Jena, MySQL, PostgreSQL, Solr, Haskell, Docker, Kubernetes. \\ [1ex] 
+		
+		\small April 2017 - March 2019  & \textbf{\large Software Engineer at Locatee AG} \textit{\footnotesize Zurich, Switzerland} \newline 
+		Analytics platform providing hyperlocation, real-time workspace occupancy insights and predictive APIs through geospatial data scraping (SNMP protocol). \newline
+		\textit{\textbf{Technology stack}}: Java 8, Spring Core, MySQL, InfluxDB, Tableau, Neo4J, Kafka, Python, Jupyter, Pandas, Docker. \\ [1ex]
+		
+		\small October 2014 - March 2017  & \textbf{\large Software Engineer at Upstream Systems SA} \textit{\footnotesize Athens, Greece} \newline 
+		Design and development of a fully distributed, fault-tolerant, modular system hosting the company's core CRM platform. The implementation included a multitude of APIs for data streaming and job scheduling accommodating thousands to millions of transactions daily. \newline
+		\textit{\textbf{Technology stack}}: Java 8, Spring Core, Spring Boot, Spring JPA, TestNG, Rabbit MQ, PostgreSQL, EhCache, Guava, Quartz, Flyway, Hibernate, Elasticsearch, Camel, Kafka, Spark, Redis, Docker, Ansible. \\ [1ex]
+		
+		\small June 2014 - September 2014 & \textbf{\large Software Engineer at Accenture} \textit{\footnotesize Athens, Greece} \newline
+		Provisioning and mediation over Oracle databases and mobile telecom software.\newline
+		\textit{\textbf{Technology stack}}: TOAD, SQL Developer, WebLogic. \\ [1ex]
+		
+		\small January 2012 - November 2013 & \textbf{\large Freelancing software and web developer} \textit{\footnotesize Athens, Greece} \newline
+		Software development on static content pages and web applications.\newline
+		\textit{\textbf{Technology stack}}: HTML / CSS, Bootstrap, Javascript, jQuery, Angular JS. \\ [1ex]
+		
+		\small October 2010 - February 2011 & \textbf{\large IT support at OTE} \textit{\footnotesize Athens, Greece} \newline
+		Department of IT support of OTE . \\ 
+	\end{longtable}
+	
+	\vspace{+0.5cm}
+	\begin{multicols}{2}
+	
+		\section*{\color{NavyBlue}Selected Works}
+		\vspace{-0.5cm}
+		{\color{NavyBlue}\hrulefill}
+			\begin{itemize}
+				\item Plethora of on-demand batch data pipeline desings using Spark, S3 and EMR clusters.
+				\item DSL design for data aggregation/mapping/parsing
+				\item Real-time data ingestion infrastructure design using Kafka and AWS.
+				\item E2E user tracking: From cookies creation to id management.
+				\item Knowledge graph ontology representations for (non)-relational data sources.
+				\item Asynchronous event-driven services on distributed environments. High availability and resiliency optimizations - namely retry framework.
+				\item Implementation of Elasticsearch user samplers via Groovy scripts and custom tree map algorithms. Rigorous stretch testing, benchmarking and performance tweaking on Elasticsearch operations. API design for intricate NoSQL querying.
+				\item Application profiling using Dropwizard’s Metrics, YourKit and custom tools.
+				\item Extensive API design \& versioning (URL \& Resource Representation).
+				\item Custom batch framework with RabbitMQ and Quartz. Throttling and flow control features included.
+				\item Semantic parsing pipelines for natural languages (bag of words to logical forms to SQL generation).
+				\item Online data distillation detecting outliers on workspace behavior and identifying team collaboration coefficients.
+				\item Modularization of monolithic applications.
+				\item QA Automation framework (Selenium, Spring).
+				\item Naive customer recommendation engine based on engineered features vectorization.
+				\item Recipe recommendation engine using Mahout and supervised learning regression algorithms (Log Likelihood Similarity for item based recommender and Pearson correlation similarity for user based recommender).
+				\item Designer and developer of a B+ indexed RDBMS in C.
+				\item Co-creator of a social network based on node.js and socket.io. The network provided real-time chatting and financial transactions between users.
+				\item Designer and developer of a Pacman game clone based on the Floyd Warshall weighted graph algorithm (C++).
+				
+				
+			\end{itemize}
+	\end{multicols}
+
+	\section*{\color{NavyBlue}References}
+	\vspace{-0.5cm}
+	{\color{NavyBlue}\hrulefill} \\
+	Available upon request
+
+\end{document}
