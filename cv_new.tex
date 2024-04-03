@@ -1,0 +1,208 @@
+\documentclass{article}
+%\usepackage[a4paper,total={6in,8in}]{geometry}
+\usepackage[a4paper,left=26mm,top=36mm,right=26mm,bottom=15mm]{geometry}
+
+%https://tex.stackexchange.com/questions/161877/too-many-white-space-in-bottom-of-the-pages
+\usepackage[usenames, dvipsnames]{color}
+%https://www.sharelatex.com/learn/Using_colours_in_LaTeX
+\usepackage{hyperref}
+%https://www.sharelatex.com/learn/Hyperlinks
+\usepackage{longtable}
+%https://tex.stackexchange.com/questions/26462/make-a-table-span-multiple-pages
+\usepackage{multicol}
+%https://www.sharelatex.com/learn/Multiple_columns
+%\usepackage{enumitem}
+%https://tex.stackexchange.com/questions/43743/how-to-reduce-line-space-leading-within-an-enumerate-environment
+\usepackage{graphicx}
+\usepackage{longfbox}
+\usepackage{fontawesome}
+
+\makeatletter
+\newdimen\@tempdimd
+\makeatother
+\graphicspath{ {./images/} }
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue, % Adjust the color to your preference
+}
+
+\usepackage{tikz}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{decorations.shapes}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{decorations.fractals}
+\usetikzlibrary{decorations.footprints}
+
+\tikzset {
+    , bedknobs one/.style = {
+        decorate
+        , fill = red!50
+        , decoration = {
+            shape backgrounds
+            , shape = #1
+            , shape size = 2mm
+        }
+    }
+    , bedknobs two/.style = {
+        decorate
+        , decoration = {
+            #1
+        }
+        , fill = blue!50
+    }
+}
+
+\newcommand{\bedknobstwo}[1]{
+    \begin{center}
+        \tikz \draw [bedknobs two = {#1}] (0,0) to (0.5\linewidth, 0);
+    \end{center}
+}
+
+
+\begin{document}
+
+	\pagenumbering{gobble}
+	\title{ \raggedright
+            \Huge{\vspace{-3.5cm} \color{NavyBlue}Niko Strongioglou } \\ \small{
+			\faPhone \, +41(0)787042239 \\
+			\faMapMarker \, Salerstrasse 16, 8050 Zurich \\
+                \faGlobe \, \href{http://tonyflow.github.io/}{web} \quad
+                \faLinkedin \, \href{https://www.linkedin.com/in/nikolaos-strongioglou/}{linkedIn} \quad
+                \faGithub \, \href{https://github.com/tonyflow}{github} \quad
+                \faUserSecret \, \href{https://leetcode.com/nikostr/}{leetCode} \quad
+                \faEnvelope \, \href{mailto:nikos.strongioglou@gmail.com}{email}
+		}
+        }
+	\author{}
+	\date{}
+	\maketitle
+	
+	\vspace{-1.4cm}
+	\noindent
+	I am a software engineer with 10 years of experience building large-scale, data-intensive, distributed systems. I revel in being a member of teams composed of smart, self-motivated, and inspired people who consider Computer Science as a means of changing the world.
+
+    %#3890A4
+
+	\section*{\color{NavyBlue}Professional Experience}
+	\vspace{-0.5cm}	
+	\fboxset{rounded,border-color=black,background-color=\#b1bdb4}%
+	{\color{NavyBlue}\hrulefill}
+	
+	%https://en.wikibooks.org/wiki/LaTeX/Tables
+        % \setlength{\LTleft}{-1cm} % Adjust the value (-1cm in this example) to decrease the left margin
+
+
+        \begin{flushleft}
+            \textbf{\large Senior Software Engineer at 1PlusX/TripleLift} \textit{\footnotesize Zurich, Switzerland} \hfill \small May 2020 - Present \newline
+            Data management and analytics platform providing multi-dimensional batch and real-time user tracking and profiling. Data consolidation and Audience teams. 
+            \newline
+            \begin{itemize}
+                \item Management of various multi-sprint/multi-quarter and cross-team data projects: Leading and mentoring small groups of developers while resolving ambiguity with non-engineering dependencies (e.g. legal, product, customer success, external clients)
+                \item Created or maintained 50+ unique data pipelines running on production systems with more than 2PB of daily loads (spawning ~30-40k Spark jobs daily).
+                \item Extensive work on AWS. Developed and maintained Terraform infra of hundreds of services.
+                \item Tag manager ingestion restructuring resulting in a data-set specific size decrease of up to 80\% - while maintaining targeting quality.
+                \item Decreased pipeline runtime up to 15\% by introducing batch REST API endpoints.
+                \item Close collaboration with ML engineers to deliver useful data for their pipelines - MLOps.
+                \item Cross-team user ID storage optimization resulting in up to 20\% decrease in Couchbase loads. Load on external APIs was decreased up to 40\%. 
+                \item Data privacy pipelines: Access and deletion requests' handling multiple protocols (GDPR, CCPA) both in batch and real-time.
+			\item DSL design for ETL ops: Rich syntax for creating and combining attributes.
+			\item Real-time data ingestion infrastructure design able to accommodate 7.5M unique events per second.
+			\item E2E user tracking: From cookies and browser-side SDKs to graph-based ID management.
+                \item UI work on analytics dashboards, widgets, data pipeline builder.
+            \end{itemize}
+            \lfbox{Scala} \lfbox{Java} \lfbox{Go} \lfbox{Python} \lfbox{Typescript} \lfbox{Angular 2+} \lfbox{Redux} \lfbox{Akka} \lfbox{Spark} \lfbox{Luigi} \lfbox{AWS} \lfbox{EMR} \lfbox{ECS} \lfbox{EC2} \lfbox{ECR} \lfbox{EKS} \lfbox{RDS} \lfbox{S3} \lfbox{CloudWatch} \lfbox{Kafka} \lfbox{Docker} \lfbox{Terraform} \lfbox{Packer} \lfbox{Grafana} \lfbox{InfluxDB} \lfbox{Couchbase} \lfbox{DynamoDB} \lfbox{PostgreSQL} \lfbox{Databricks} \lfbox{Elasticsearch} \lfbox{Opensearch}\\ [1ex] 
+        \end{flushleft}
+
+        \begin{flushleft}
+	   \textbf{\large Software Engineer at Veezoo AG} \textit{\footnotesize Zurich, Switzerland} \hfill \small March 2019 - May 2020   \newline
+		NLP platform providing analytics through a variety of corporate data source integrations - namely Oracle, MySQL, PostgreSQL, Salesforce, IBM DB2, Hadoop, SAP HANA - using a QA interface.
+            \newline
+            \begin{itemize}
+                \item Knowledge graph ontology representations API for (non)-relational data sources which automated data onboarding.
+                \item Semantic parsing pipelines for natural languages (bag of words to logical forms to SQL generation).
+                \item Extend and maintain the \href{https://github.com/facebook/duckling}{Duckling} language engine
+            \end{itemize}
+		\lfbox{Scala} \lfbox{Play} \lfbox{Apache Jena} \lfbox{MySQL} \lfbox{PostgreSQL} \lfbox{Solr} \lfbox{Haskell} \lfbox{Docker} \lfbox{OpenShift} \lfbox{Duckling} \\ [1ex] 
+        \end{flushleft}
+
+        \begin{flushleft}
+            \textbf{\large Software Engineer at Locatee AG} \textit{\footnotesize Zurich, Switzerland} \hfill \small April 2017 - March 2019  \newline 
+		Analytics platform providing hyperlocation, real-time workspace occupancy insights and predictive APIs through geospatial data scraping (SNMP protocol). 
+            \newline
+            \begin{itemize}
+                \item Led the modularization of the core app monolith. From creating three distinct services - Analytics API, Data processing service, and pollers - to POCs and eventually to global roll-outs.
+                \item Online data distillation pipeline detecting outliers on workspace behavior and identifying team collaboration coefficients.
+                \item Different MySQL read/write optimizations for measurements post-processing
+            \end{itemize}
+		\lfbox{Java 8} \lfbox{Spring Core} \lfbox{MySQL} \lfbox{InfluxDB} \lfbox{Tableau} \lfbox{Neo4J}      \lfbox{Kafka} \lfbox{Python} \lfbox{Jupyter} \lfbox{Pandas} \lfbox{Docker} \\ [1ex]
+        \end{flushleft}
+
+        \begin{flushleft}
+            \textbf{\large Software Engineer at Upstream Systems SA} \textit{\footnotesize Athens, Greece} \hfill \small October 2014 - March 2017   \newline 
+		Green-field project re-engineering the core CRM platform as a fully distributed system. The implementation included a multitude of APIs for data streaming and job scheduling accommodating thousands to millions of transactions daily. 
+            \newline
+            \begin{itemize}
+                \item Asynchronous event-driven services on distributed environments using Guava and RabbitMQ. High availability and resiliency optimizations.
+			\item Implementation of Elasticsearch user samplers via Groovy scripts and custom treemap algorithms. Stretch testing, benchmarking, and performance tweaking on Elasticsearch operations.
+			\item Performance profiling (Dropwizard’s Metrics, YourKit, Grafana, and other tools).
+			\item API versioning (URL \& Resource Representation).
+			\item Batch job framework implementation with RabbitMQ and Quartz. Throttling and flow control features included.
+                \item QA Automation framework (Selenium, Spring).
+			\item Recommendation engine using Mahout and supervised learning regression algorithms (Log Likelihood Similarity for item-based recommender and Pearson correlation similarity for user-based recommender).
+            \end{itemize}
+		\lfbox{Java 8} \lfbox{Spring Core} \lfbox{Spring Boot} \lfbox{Spring JPA} \lfbox{Spark}       \lfbox{TestNG} \lfbox{RabbitMQ} \lfbox{PostgreSQL} \lfbox{EhCache} \lfbox{Guava} \lfbox{Quartz} \lfbox{Flyway} \lfbox{Hibernate} \lfbox{Elasticsearch} \lfbox{Camel} \lfbox{Kafka} \lfbox{Spark} \lfbox{Redis} \lfbox{Docker} \lfbox{Ansible} \lfbox{Protobuf} \\ [1ex]
+        \end{flushleft}
+
+        \begin{flushleft}
+            \textbf{\large Software Engineer at Accenture} \textit{\footnotesize Athens, Greece} \hfill \small June 2014 - September 2014  \newline
+		Provisioning and mediation over Oracle databases and mobile telecom software. \newline
+		\lfbox{TOAD} \lfbox{SQL Developer} \lfbox{WebLogic} \\ [1ex]
+        \end{flushleft}
+
+        \begin{flushleft}
+            \textbf{\large Freelancing Web Developer} \textit{\footnotesize Athens, Greece} \hfill \small January 2012 - November 2013 \newline
+		Software development on static content pages and web applications. \newline
+		\lfbox{HTML / CSS} \lfbox{Bootstrap} \lfbox{Javascript} \lfbox{jQuery} \lfbox{Angular JS} \\ [1ex]
+        \end{flushleft}
+	
+	\vspace{+0.5cm}
+	% \begin{multicols}{2}
+	
+		\section*{\color{NavyBlue}Other Works}
+		\vspace{-0.5cm}
+		{\color{NavyBlue}\hrulefill}
+		\begin{itemize}
+			\item Designer and developer of a B+ indexed RDBMS in C.
+			\item Co-creator of a social network based on node.js and socket.io. The network provided real-time chatting and financial transactions between users.
+                \item Various API prototypes using Flask and FastAPI
+            \end{itemize}
+                
+	% \end{multicols}
+
+        \section*{\color{NavyBlue} Education}
+	\vspace{-0.5cm}
+	{\color{NavyBlue} \hrulefill}
+	
+	\subsection*{Degrees}
+	\begin{tabular}{p{2cm}  p{12cm}}
+		\small September 2013 & \textbf{M.Sc. in Computer Science} \newline
+			Department of Computer Science, National and Kapodistrian University of Athens - 7.49/10 or Upper Second-Class Honours
+	\end{tabular}
+
+	\subsection*{Languages}
+		\begin{tabular}{p{2cm}  p{12cm}}
+			Greek & Native \\
+			English & Certificate of Proficiency in English, University of Cambridge, Grade A \newline
+							Certificate of Proficiency in English, University of Michigan, Honors \\
+			German & B1 \\
+			French & Diplome d’etudes en langue Francaise (DELF) 
+		\end{tabular}
+
+	\section*{\color{NavyBlue}References}
+	\vspace{-0.5cm}
+	{\color{NavyBlue}\hrulefill} \\
+	Available upon request
+
+\end{document}
