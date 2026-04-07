@@ -45,7 +45,6 @@
 - proprietary Gandalf data
 
 
-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
 
 
 curl https://api-inference.huggingface.co/models/KoalaAI/Text-Moderation \
