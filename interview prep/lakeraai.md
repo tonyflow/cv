@@ -52,10 +52,7 @@ curl https://api-inference.huggingface.co/models/KoalaAI/Text-Moderation \
 	-X POST \
 	-d '{"inputs": "I like you. I love you"}' \
 	-H 'Content-Type: application/json' \
-	-H "Authorization: Bearer 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"
-
-
-	--- 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
+	-H "Authorization: Bearer <bearer_token>"
 
 	focus on this area
 
