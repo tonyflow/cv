@@ -1,0 +1,10 @@
+Currently, I am working in a team that is using ES to optimize user querying. While using Couchbase to store the entirety of users' profiles, we are sampling profiles - on an application level - and sending them - through Kafka - to ES for indexing. This allows the UI to perform faster queries when building user audiences. The optimization in this case does not really involve ES features themselves. Instead, we have spent a lot of time making sure that:
+- The footprint of every index is relatively contained at create/update time - use Bulk API.
+- We are creating new indexes instead of bloating existing ones with more data e.g. one index per customer per date instead of one index per customer. This is mainly performant because of the nature of the queries we need.
+- Keeping replicas - and consequently shards - low: These data could be easily and quickly reindexed. Also scaling out rarely occurs due to good initial provisioning and fixed sampling rates.
+- Garbage collection is frequent: Either through appropriate TTL assignment or app-level housekeeping on the indexes.
+- Different metrics on the above were reported on Influx and displayed on Grafana for further analysis.
+Thus the optimizations revolve more around how we organize data on ES than on the cluster configuration itself.
+
+
+Some years ago, I was again working on a ES project where we had to sample data from certain indexes. Random scoring can be resource-intensive. Especially when the query assigns scores to all documents on an index and the index is big. On top of that random_score also evaluates other parameters before making a final decision about what to include in the sample - a feature which was making the queries slower and was not needed in our case. To avoid this, we introduced queries using Groovy scripts which avoid touching certain documents altogether and keep the retrieved sample in a tree map to accelerate criteria matching (the tree map was organized based on a comparator whose definition was the query definition).

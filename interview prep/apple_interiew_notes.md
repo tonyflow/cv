@@ -1,0 +1,67 @@
+- Infrastrure team
+	- Apple since 2017
+	- Consulting company Zulker
+		- Enterprise java application
+		- data analytics 
+		- big fata technology
+
+	- PhD
+		- Content based image retrieval
+	- ZVL
+		- Face tracking for
+		- Eye contact
+			- 
+		- Face representation: Person
+		- Understanding human faces
+			- In particular the face of the user
+		- Tooling and the knowledge about how to handle the data volume
+			- Scaling and the cloud environment that are available to us
+		- Data of users cannot be used due to privacy
+		- Hardware that has not be released
+			- How do you do these data collections?
+			- How do you design these scenarios? Who is designing these scenarions?
+				- What is your role there?
+				- Are the data enough for a company size like Apple?
+					- Case study sounds limited?
+					- Record data in the way that?
+					- 
+			- Ingest it and review it
+			- Get human annotations? From where exactly?
+			- Making the data accessible to allow the Data Engineers to use them?
+			- Benchmarking
+		- 50 people
+			- most have CV and 
+			- Integration team that runs models on device
+			- Infra
+				- data engineering 
+
+		Grischa
+			- physicist
+			- SWE many years ago
+			- Mainting our infrastructure
+				- Kubernetes
+				- Database
+				- Access Control
+			- In house data processng framework?
+				- Orchestration?
+				- Topologically sorting?
+				- What are the idiosincrasies?
+			- Day to day support of ML engineers
+			- Complex CI system that tests all the code
+				- What does this
+
+- Pair programming
+	- Algorithms
+- On site one day of interviews
+	- 
+- We do not 
+	- Face tracking for emoji
+	- Face shift
+	- Offline tracking to run on sequences that we're
+		- 
+	- Assess margin of error
+	- 
+
+- TensorFlow
+	- Python
+	- 

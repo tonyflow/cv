@@ -1,0 +1,13 @@
+I am writing to express my keen interest in the Senior Software Engineer position at Fotokite. With over 10 years of experience in software engineering, specializing in building large-scale, data-intensive distributed systems, I am excited about the opportunity to contribute to your innovative emergency response and public safety solutions.
+
+Currently, as a Senior Software Engineer at 1PlusX/TripleLift in Zurich, I have managed multi-sprint, cross-team data projects, developed extensive AWS infrastructure, and optimized data pipelines processing over 2PB daily. This experience has honed my skills in Scala, Java, Go, Python, Typescript, and various AWS services - among other technologies - making me well-equipped to handle the challenges at Fotokite.
+
+What attracts me to Fotokite is your commitment to enhancing public safety through advanced technology. Your product, Fotokite Sigma, aligns perfectly with my passion for creating impactful technologies. I am particularly impressed by your focus on reliability and effectiveness in adverse weather conditions, areas where I believe my expertise in real-time data ingestion and processing can be highly beneficial.
+
+I am eager to bring my experience in leading projects, optimizing data systems, and collaborating with cross-functional teams to Fotokite. I am confident that my background in software engineering will make me a valuable asset to your team.
+
+Thank you for considering my application. I look forward to the opportunity to discuss how my skills and experiences align with Fotokite's mission and contribute to the next generation of your products.
+
+Sincerely,
+
+Niko Strongioglou

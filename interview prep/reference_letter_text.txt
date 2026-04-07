@@ -1,0 +1,6 @@
+I am delighted to recommend Niko Strongioglou for the role of AIML Engineer. While we have not worked together directly, our interactions within various engineering circles and through numerous discussions on professional topics have given me a deep appreciation of Niko's expertise and insights in the field of software engineering.
+
+Niko’s depth of knowledge, especially in managing large-scale, data-intensive systems, is evident in our discussions. He demonstrates a clear and comprehensive understanding of complex technical concepts, ranging from advanced AWS infrastructure management to optimizing high-volume data pipelines. This, coupled with his proficiency in languages like Scala, Java, Go, and Python marks him as a highly skilled and versatile engineer.
+
+What sets Niko apart, however, is his ability to articulate complex ideas clearly and his eagerness to engage in thoughtful, collaborative problem-solving. His insights during our conversations have often provided fresh perspectives and innovative approaches to various technical challenges. This intellectual generosity and enthusiasm for the field of software engineering, I believe, makes him a valuable addition to any team. I am confident that Niko's technical acumen and collaborative spirit will greatly benefit your company, just as they have enriched our professional discussions.
+

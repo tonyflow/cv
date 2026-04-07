@@ -1,0 +1,45 @@
+- ML and driving these different models
+- Conversational piece that uses different components
+	- 
+- Software
+	- Smaller startup
+	- Physics
+	- Lacked the mathematical background
+	- Search related things
+		- Embed the data for search
+		- Elastic search for querying
+		- Search is the cornerstone of the platform
+
+
+- Singapore and New York with solutions engineers
+- Zurich has engineers
+	- 6 or 7 people in the true backend engineering
+	- 6 or 7 peopel in the frontend
+	- platform team that works withe data ingenstion
+	- AI team
+		- ML or statistical modeling
+		- Thomas
+			- 
+	- Search team
+		- ES platform scales well
+	- Usually all of us are working together
+	- Kanban board and Scrum
+	- LTS sprint
+		- Test the platform to the bits and pieces and fix as many issues as we can
+	- ECB
+		- Millions of documents
+		- Large cluster of ES (is it managed?)
+		-
+	- Architecture
+		- ES search
+		- API layer that does some magic on top
+			- Custom query language
+		- Combined backend API layer
+			- 99.9% of the functionality can be done through this API client
+			- Used to run on a headless node
+		- The UI uses a separate frontend
+			- React APP that uses the frontend API layer
+		- Ingestion
+			- Pipeline - python application -  that integrates data sources
+			- Augmentation of the incoming data
+		- Source code is 

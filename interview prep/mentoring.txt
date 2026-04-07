@@ -1,0 +1,23 @@
+On one of my last projects, I had to extend the DSL which describes how we define and parse data sources into a specific/canonical form. The DSL extension allowed for the combination of data from different sources. This was an effort affecting multiple components of the system. Fortunately, since the APIs between the components were clear, multiple developers could work on the project. One of the developers involved was responsible for the CRUD operations on the data source/attribute builder. Apart from being unfamiliar with the business logic of the model, the engineer was also missing knowledge about normal forms and database migration. So my job was to:
+1. Explain the hierarchy of channels, sources, and attributes
+2. Explain how the existing API manages this hierarchy and how we're testing
+3. Explain what is the purpose of the new source combination functionality. What is it that we want to achieve? It's always the business know-how that will drive a clean and valued implementation.
+4. Then on a more technical level I had to discuss with him how this business logic is represented in the database. We had to answer questions like:
+    a. Do we need to further normalize the existing model?
+    b. How are many-to-many relations represented in a database?
+    c. Is this a good opportunity to convert JSON columns into separate tables?
+    d. What would be the effort of such a refactoring?
+5. The selected ORM structure also needed changes thus we had to also discuss ORMs on a Scala level.
+6. More than 50 pipelines would depend on these changes thus we had to entertain what was the path of least resistance: Achieve the goal by minimizing the risk.
+7. Agree on an action plan where clear incremental changes could be deployed.
+8. Although I enjoy guiding people I am working with, I avoid creating tasks for them since I believe that this is a process that can increase their sense of ownership and overall understanding of what has been already discussed. Furthermore, articulating one's ideas in written form surfaces reasoning gaps!
+9. Once the tasks are created I reviewed all relevant PRs, providing a course correction where needed.
+
+On a 1-on-1, the engineer confessed that he had a much better understanding of the data model and which components were dependent on it. On top of that, we had a whole new knowledge about database normalization and Scala ORMs. Apart from database-related knowledge transfer, we talked a lot about the error model of the new API: Checked, unchecked, and recoverable errors. Making the engineer think in terms of:
+- When would you want the system to recover?
+- When would you want the system to fail hard?
+- How is this achieved on a specific tech stack?
+- How granular checked exceptions should be?
+Creates the right mindset to tackle such a task.
+
+I was happy when the engineer successfully implemented the CRUD API and the data model migration.

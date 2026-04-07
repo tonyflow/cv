@@ -1,0 +1,47 @@
+Since the question is ambiguous, I will try to set the ground by first making some assumptions. For the sake of simplicity and to provide a more concise response.
+
+One might need to refactor legacy code for one of the following reasons: 
+1. Introduce a new feature 
+2. Optimize existing infrastructure and make a system more performant or cost-effective 
+3. Remove technical debt. Although this might also have performance or cost advantages its main focus is to make the system more maintainable and coherent.
+
+Before we go into how these cases should be handled, we should clarify that refactoring legacy code involves different levels of risk. If core code components are tightly bound then the risk of refactoring is high. If on the other hand, there are clear interfaces - but the implementations themselves carry complexity that could be simplified - then refactoring is safer.
+
+Now you can picture this as a system of 3-axis
+1. x is the type of improvement
+2. y is how loosely or tightly components are bound to one another
+3. z is the risk involved
+
+In this system, it is worth talking about the part of the space high on the z-risk axis since this is where one must properly gauge how to handle the risk. In low-risk areas where the legacy code contains clean interfaces and can be easily refactored there are also risks but much more manageable by:
+- providing coherent and maintainable implementations
+- meaningfully extending interfaces
+- cleaning parts of the code which are no longer needed, including tests
+- new unit tests and checking if existing ones make no sense anymore
+- refactoring integration tests. Integration tests are the ones that get outdated fast but due to their complexity, few people maintain. Small fixes during development cycles can keep coverage high and debt low.
+This kind of practice is low risk at the time of development and reduces risk for future work on the code.
+
+Let us focus now on the high end of the risk axis. Following is the work on legacy code sorted by the risk involved:
+1. Optimizing existing infrastructure. External interfaces rely on existing infrastructure and reaching a point where optimization is critical means that the timely delivery of the change is important. On top of that, the goal is to have at least parity with the previous state of the system.
+2. Introduce a new feature. A new feature is not producing any value yet.
+3. For the sake of brevity, I assume that technical debt is not time-critical and does not produce business value at this point and I will avoid getting deeper into it. Although this is a very risky assumption, I cannot adequately develop tech debt risk management in the close confines of this answer prompt.
+
+How do we strike a balance on the first two occasions? I would adibe by the following hierarchy when tampering with legacy code in the first two cases:
+1. If the change/improvement is contained (e.g. code is included in one class) then proceed and refactor
+2. If the change  is not contained then assess the situation:
+     a. Can it be time-boxed without compromising the delivery of the project? 
+            i. If yes, then proceed with the refactoring. 
+            ii. If yes, but one evaluates the change of lesser importance, then add a TODO on the code itself and proceed with the development. 
+            iii. If no, then assess how long this would take. This is important for triaging the desired change. 
+            iv. If the change is on the scope of sprint then create a ticket and build around the legacy code while keeping in mind the futureproofness of the solution about the code you just created a ticket for
+            v. If you think the change should be extensive then consider creating an OKR idea for this. This should then be addressed more thoroughly through a tech spec doc and further engineering discussions. To proceed, follow the legacy code pattern. The OKR can address both in the future.
+
+This is only a rule of thumb and of course, there are other dimensions to factor in like:
+- What is the level of one's expertise with the legacy code? 
+- Can the apparently confusing reasoning of the legacy code be improved by documentation?
+- How critical - in terms of dependencies or value produced - is the code that needs to be refactored?
+- If the change is on a shared library, is the change backwards compatible? Would the clients need to be updated? Should there be a migration process?
+- Are there enough tests on the legacy code that would cover the forthcoming changes as well?
+
+In general, I believe that refactoring during development should be addressed on the same scope/PR as the feature that one is working on. If not, my experience has shown, that these changes - however crucial they might be - are more often than not deferred indefinitely. Thus, pushing the timeline forward one or two days to the benefit of keeping the code coherent is preferable to having an ever-increasing complexity.
+
+It is the responsibility of senior engineers to build this culture of striving for clean code by providing only essential PR feedback. 
