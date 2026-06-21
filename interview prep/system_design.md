@@ -45,7 +45,7 @@ Network card capacity:
 
 
 ### Success metrics
-This is driven by product and 
+This is driven by product and the success criteria are closely related to the functional requirements.
 
 
 ### APIs
@@ -58,7 +58,7 @@ Rough draft of the endpoints that you want to use
 
 ### Database design
 - Mutable data: Use a SQL database
-- Immutable data: Use a DFS like S3
+- Immutable data: Use an ObjectStore like S3 (RustFS for on-premise deployments)
 - What is the traffic patterns related to the data?
 - What kind of access control we want to provide to the data?
 - Do we need indexes for the data?
