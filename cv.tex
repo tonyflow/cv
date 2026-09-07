@@ -53,30 +53,31 @@
     {\color{NavyBlue}\hrulefill}
 
         \begin{flushleft}
-            \textbf{\large Lead Software Engineer at ethon.ai}
-            {\footnotesize \textcolor{gray}{Zurich, Switzerland}} \hfill \small November 2025 - Present
+            \textbf{\large Lead Software Engineer at ethon}
+            {\footnotesize \textcolor{gray}{Zurich, Switzerland}} \hfill \small November 2024 - November 2026
             \newline
             \textit{Platform team lead (6 engineers). Owning MLOps and data, serving vision, time-series anomaly detection, and causal inference teams.}
             \begin{itemize}[label=\raisebox{0.25ex}{\tiny$\bullet$}, leftmargin=1.5em, labelsep=0.3em]
                 \item Redesigned company-wide data integration: Introduced a scalable, EKS-based, and configurable worker paradigm that decreased the effort of FDEs from days to hours and expanded the product to new markets.
                 \item Established platform standards for raw data parsing and loading pipelines, allowing composable pre-/post-processing and inference. Support for 100+ data and metadata tables.
                 \item Architected infrastructure for fine-tuning vision foundation models using PyTorch and AWS Batch. (\href{https://github.com/facebookresearch/dino}{DINO}, \href{https://github.com/facebookresearch/sam2}{SAM 2})
+                \item Introduced dedicated, MIG, and time-sliced GPU pools - spanning multiple AZs - with \href{https://kueue.sigs.k8s.io/docs/concepts/resource_flavor/}{resource flavor} fallback to address GPU scarcity for Kubernetes training workloads.
                 \item Designed and led implementation of vision inference pipelines with FastAPI, Kubernetes, and \href{https://docs.nvidia.com/deeplearning/triton-inference-server/user-guide/docs/index.html}{Triton} (point-to-region, region type identification, anomaly detection/classification) - 2ms runtimes.
-                \item Provided technical leadership and oversight for the migration from legacy single-node docker-compose deployments to Amazon EKS, defining deployment, scaling, and operational patterns adopted across teams.
+                \item Provided technical leadership and oversight for the migration from legacy single-node docker-compose deployments to EKS, defining deployment, scaling, security and operational patterns adopted across teams.
                 \item Guided the architecture of a distributed ML experimentation and evaluation platform (hundreds of datasets) using \href{https://github.com/treeverse/dvc}{DVC}, AWS Batch (GPU) with experiment tracking via \href{https://mlflow.org/classical-ml/experiment-tracking/}{mlflow}.
-                \item Drove database optimizations for: compression (up to 90\%+ or $\approx\,\$200$ savings per customer), query runtimes for training data retrieval (minutes to seconds), continuous aggregates using materialized views, \href{https://github.com/cloudnative-pg/cloudnative-pg}{CloudNativePG} using \href{https://www.postgresql.org/about/news/pgpool-ii-460-is-now-released-3028/}{pgpool-II} routing, passive/active and read/write nodes.
+                \item Drove database optimizations including compression (up to 90\%+ or $\approx\,\$200$ savings per customer), query runtimes for training data retrieval (minutes to seconds), continuous aggregates using materialized views, \href{https://github.com/cloudnative-pg/cloudnative-pg}{CloudNativePG} using \href{https://www.postgresql.org/about/news/pgpool-ii-460-is-now-released-3028/}{pgpool-II} routing, passive/active and read/write nodes.
                 \item Defined engineering \& hiring standards by conducting 40+ technical interviews.
             \end{itemize}
         \end{flushleft}
 
         \begin{flushleft}
-            \textbf{\large Senior Software Engineer at ethon.ai}
+            \textbf{\large Senior Software Engineer at ethon}
             {\footnotesize \textcolor{gray}{Zurich, Switzerland}} \hfill \small June 2024 - November 2024
             \newline
             \textit{MLOps and data on computer vision pipelines. Member of the visual quality inspection team.}
             \begin{itemize}[label=\raisebox{0.25ex}{\tiny$\bullet$}, leftmargin=1.5em, labelsep=0.3em]
-                \item Designed and led the implementation of a distributed system for exchanging vision models and anomaly detection results between training servers and edge devices using \href{https://mqtt.org/}{MQTT} and different NFSs(e.g. \href{https://rustfs.com/}{RustFS}) for on-premise and cloud deployments.
-                \item Extended customer-facing vision workflows (Angular) to support ROI monitoring, defect heatmaps, annotations, and model evaluation, improving usability and transparency of ML predictions.
+                \item Designed and led the implementation of a distributed system for exchanging vision models and anomaly detection results between training servers and edge devices using \href{https://mqtt.org/}{MQTT} and different NFSs (e.g. \href{https://rustfs.com/}{RustFS}) for on-premise and cloud deployments.
+                \item Extended customer-facing UI vision workflows (Angular) to support ROI monitoring, defect heatmaps, annotations, and model evaluation, improving usability and transparency of ML predictions.
                 \item Redesigned vision data storage architecture and reduced storage footprint by ~40\%.
                 \item Drove improvements to testing infrastructure: UI unit testing, revised integration test framework.
             \end{itemize}
@@ -92,7 +93,7 @@
             \begin{itemize}[label=\raisebox{0.25ex}{\tiny$\bullet$}, leftmargin=1.5em, labelsep=0.3em]
                 \item Led multi-sprint/multi-quarter and cross-team data projects: Mentoring small groups of developers while resolving ambiguity with non-engineering dependencies such as legal, product, customer success, and external clients.
                 \item Real-time data ingestion ECS infrastructure able to accommodate 7.5M unique events per second on a 30-node Kafka cluster.
-                \item Created or maintained 50+ unique data pipelines running on production systems with 2PB+ of daily traffic (spawning ~30-40k Spark jobs daily). Orchestrated using \href{https://github.com/spotify/luigi}{Luigi}. Running on EMR on EKS (or EC2).
+                \item Owned and evolved 50+ unique data pipelines running on production systems with 2PB+ of daily traffic (spawning ~30-40k Spark jobs daily). Orchestrated using \href{https://github.com/spotify/luigi}{Luigi}. Running on EMR on EKS (or EC2).
                 \item Designed and maintained Terraform-based infrastructure for hundreds of AWS services.
                 \item Tag manager - \href{https://www.playframework.com/}{Play} - ingestion restructuring resulting in a dataset size decrease of up to 80\% - while maintaining targeting quality.
                 \item Decreased pipeline runtime up to 15\% by introducing batch \href{https://github.com/akka/akka-core}{Akka} API endpoints.
@@ -100,7 +101,7 @@
                 \item Cross-team user ID storage optimization resulting in up to 20\% decrease in Couchbase loads. Load on external APIs was decreased up to 40\%. 
                 \item Data privacy pipelines: Access and deletion requests' handling of multiple protocols (GDPR, CCPA).
             \item DSL design for ETL ops: Rich syntax for creating and combining attributes.
-            \item E2E user tracking: From cookies and browser-side Typescript SDKs to graph-based ID management.
+            \item E2E user tracking: From cookies and browser-side TypeScript SDKs to graph-based ID management.
                 \item Angular 2 work on analytics dashboards, widgets, data pipeline builder.
             \end{itemize}
             \lfbox{Scala} \lfbox{Java} \lfbox{Go} \lfbox{Python} \lfbox{Redux} \lfbox{ECR} \lfbox{RDS} \lfbox{s3} \lfbox{CloudWatch} \lfbox{Docker} \lfbox{\href{https://github.com/hashicorp/packer}{Packer}} \lfbox{Grafana} \lfbox{InfluxDB} \lfbox{DynamoDB} \lfbox{PostgreSQL} \lfbox{Databricks} \lfbox{Elasticsearch} \lfbox{OpenSearch}\\ [1ex] 
@@ -113,7 +114,7 @@
             \begin{itemize}[label=\raisebox{0.25ex}{\tiny$\bullet$}, leftmargin=1.5em, labelsep=0.3em]
                 \item Developed and owned data onboarding automation from raw data to \href{https://github.com/apache/jena}{Apache Jena}: Knowledge graph ontology representations API for (non)-relational data sources. 
                 \item Semantic parsing pipelines for natural languages (bag of words to logical forms to SQL generation).
-                \item Extend and maintain the \href{https://github.com/facebook/duckling}{Duckling} language engine written in Haskell.
+                \item Extended and maintained the \href{https://github.com/facebook/duckling}{Duckling} language engine written in Haskell.
             \end{itemize}
         \lfbox{Scala} \lfbox{Play}  \lfbox{Solr} \lfbox{Docker} \lfbox{OpenShift}  \\ [1ex] 
         \end{flushleft}
@@ -124,7 +125,7 @@
             \begin{itemize}[label=\raisebox{0.25ex}{\tiny$\bullet$}, leftmargin=1.5em, labelsep=0.3em]
                 \item Led the modularization of the core \href{https://spring.io/projects/spring-framework}{Spring} Java 8 app monolith. From creating three distinct services - Analytics API, Data processing service, and pollers - to POCs and eventually to global roll-outs.
                 \item Online data distillation pipeline detecting outliers on workspace behavior and identifying team collaboration coefficients.
-                \item Different MySQL read/write optimizations for measurements post-processing
+                \item Implemented different MySQL read/write optimizations for measurements post-processing.
             \end{itemize}
          \lfbox{InfluxDB} \lfbox{Tableau} \lfbox{Neo4J}      \lfbox{Kafka} \lfbox{Python} \lfbox{Jupyter} \lfbox{Pandas} \lfbox{Docker} \\ [1ex]
         \end{flushleft}

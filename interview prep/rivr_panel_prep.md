@@ -20,12 +20,58 @@
 7. Reinforcement learning pipeline
 8. Distributed systems based on key/value store design under here: https://bytebytego.com/courses/system-design-interview/design-a-key-value-store 
 	* quorums
-9. Questions to the panel
-	* You're looking for a senior engineer. Not a junior, not a principle. What are your expectations from such a hire in a horizon 1,3 and 6 months?
-	* What is the ballpark of data you're retrieving from every robot?
-	* What is the size of your robot fleet.
-	* Are you expecting the engineer to be on standby for any reason?
-	* 
+9. Questions to the panel: Check at the end of the document.
+10. TODO
+	* MAJOR! Go through the RL pipeline on ChatGPT ✅
+		* There are two topics here (1) Locomotion policy deployment
+		* RL training pipeline design
+	* Go through PyTorch basic on GPT ✅
+	* Go through distributed training modes ✅
+	* Go thorugh on robot inference 
+	* Go through sources of data for robotics pipelines ✅
+	* Go through the release gates before deploying to production for robots ✅
+	* Go through realtime data ingestion technics for robots (gRPC/MQTT/WebSocket)
+	* Are you sure you can explain what Hydra is?
+	* Remember model checkpoints and their usefulness
+	* Go thrpugh the rivr interview prep question under the rivr project and check if I am missing something.
+	* Algorithms to remember
+		* BFS
+		* Multi-source BFS
+		* Bellman-ford negative edges directed with at most k edges used
+		* Floyd warshall all pair shortest-path on weighted directed graphs
+		* Dijstra
+		* A* directed graph with direction heuristics
+		* Topological sort
+		* Union find
+		* Alien dictionary provblem?
+	* Go through RL basics? Maybe not
+	* Simple coding exercises
+	* Go through this document end to end before the interview
+	* Exploration VS exploitation
+
+---------------------------------------
+# PyTorch basics
+1. ```python
+model.train() # training
+model.eval() # validation and inference
+```
+
+2. `state_dict`
+A dictionary containing state parameters like weights and biases. 
+
+3. Saving checkpoints
+4. Mixed precision training and quantization
+5. Distributed training technics
+	* `torch.distributed.DistributedDataParallel`
+	* `torch.distributed.FullyShardedDataParallel`
+6. Tensor is a multidimensional array
+7. autograd is PyTorch's differentiation engine
+8. What happens during training
+	* Forward pass
+	* Compute loss
+	* Backward pass
+	* Optimizer updates the weights
+	
 ---------------------------------------
 # Robotics basics
 1. Occupancy maps / grids
@@ -39,7 +85,7 @@
 # SLAM
 The main questions that it tries to answer is
 1. Where am I?
-2. Where does the world arounf me look like?
+2. How does the world around me look like?
 
 There's a cyclic dependency between these two questions:
 * In order to understand where I am, I need a map
@@ -51,7 +97,7 @@ When a robot enters a space it has never seen before, it starts in a random loca
 1. Lidar
 2. Camera
 3. IMU: Inertia Measurement Units. Measures robot orientation and gravitational forces.
-4. Wheel encoder: Measure the rotation (and implicitly velocity of a wheel) when as the robot is moving. They are essential for tracking speed, controlling motor accuracy and calculating the robot's position over time.
+4. Wheel encoder: Measure the rotation (and implicitly velocity of a wheel) as the robot is moving. They are essential for tracking speed, controlling motor accuracy and calculating the robot's position over time.
 
 Using the data from the sensors the robot estimates a pose. A pose is a combinations of (x,y,Θ) in 2D or (x,y,z,roll, pitch, yaw) in 3D. This tuple can identify the orientation of the robot in space.
 
@@ -94,7 +140,7 @@ How does a SLAM and path finding pipeline look like?
 	
 ## Example in the case of RIVR
 There are two parts to the "Deliver a package directive"
-1. The robot receives an address, it loads a map and it knows it's location on the map through GPS. The path finding does not require SLAM, excpe the case where the environment becomes dynamic e.g. people in way 
+1. The robot receives an address, it loads a map and it knows it's location on the map through GPS. The path finding does not require SLAM, except the case where the environment becomes dynamic e.g. people in way 
 2. Once it reaches the address though another sort of navigation starts:
 	* front yard
 	* garden path
@@ -105,6 +151,25 @@ There are two parts to the "Deliver a package directive"
 	1. localize precisely
 	2. update the local map
 	3. replan around obstacles
+
+---------------------------------------
+# Reinforcement learning policies
+A policy dictates the robot's behavior. I can be anything from:
+1. A neural network
+2. A decision tree
+3. A set of handwriten rules
+4. A lookup table
+
+A GPS navigation is an example: At this intersection turn left, at the next intersection turn left. The instructions are the policu and the software running inside the GPS device is the model.
+
+* The policy is what decisions are made
+* The model is how these decisions are generated
+
+
+In modern RL world the words policy and model are used interchangeably e.g.
+* I trained a model
+* I trained a policy
+What was actually deployed is a neural network
 
 
 ---------------------------------------
@@ -130,24 +195,24 @@ What are the basic components of a robotics MLOps pipeline
 
 ## Robot fleet data
 The folling is a list of data points, the robots can provide - the list is not exhaustive:
-1. camera frames
-2. lidar points (x,y,z)
-3. radar detections
+1. Camera frames (video or photos)
+2. Lidar points (x,y,z) - GeoJSONs
+3. Radar detections
 4. IMU data
-5. wheel encoder odometry
+5. Wheel encoder odometry
 6. GPS ?
-7. planned path
-8. executed path
-9. control commands
-10. planner decisions
-11. operator interventions
-12. faults/crashes/(near)misses
+7. Planned path
+8. Executed path
+9. Control commands
+10. Planner decisions
+11. Pperator interventions
+12. Faults/crashes/(near)misses
 
-* Apart from raw data, we also log plannet outputs, model predictions and ground-truth-ish data. 
+* Apart from raw data, we also log planned outputs, model predictions and ground-truth-ish data. 
 * This is the data producer layer.
 
 ## On-robot logging/buffering
-This is the data capture layer. Where are the data produced in the previous layer actually storeed?
+This is the data capture layer. Where are the data produced in the previous layer actually stored before being ingested?
 The data of the previous stage are getting combined with
 1. timestamps
 2. sensor metadata
@@ -162,13 +227,14 @@ The data of the previous stage are getting combined with
 ## Cloud ingestion
 There are a few ways that this can be done:
 1. Synchronous / Real-time
+	* Everything that is stored on ROS
 2. A-synchronous / Offline or in-batch
 
 The cloud ingestion layer should handle:
 1. Authentication
 2. Robot identity
 3. Upload reusability
-4. Schema validation
+4. Schema validation: More on this during data curation.
 5. Deduplication
 6. Metadata extraction
 7. Routing to storage
@@ -235,7 +301,7 @@ Some of the steps might be:
 		* failure labels robot e.g. got stuck/colliede 
 		* human intervention labels e.g. teleoerator took action
 	
-	In robotics, a lot of labels can eb weakly or automatically generated.
+	In robotics, a lot of labels can be weakly or automatically generated.
 
 8. Dataset construction
 
@@ -283,14 +349,13 @@ In this stage, the training is taking place and we record everything that is nec
 * hardware the training was ran on
 
 A robot might employ many different models
-1. object detection
-2. semantic segmentation: per-pixel classification, every pixel is labeled as sidewalk, grass, curb, stairs, pedestrian etc.
-3. traversability prediction: Predict whether the robot can safely drive through an area. Output is often a traversability score or binary decision.
-4. terrain classification: Classify terrain types like sidewalk, gravel, grass, mud, stairs, wet pavement.
-5. visual odometry: Estimating robot motion using camera images instead of wheel encoders
-6. place recognition
-7. local costmap prediction
-8. failure prediction
+1. Object detection.
+2. Semantic segmentation: per-pixel classification, every pixel is labeled as sidewalk, grass, curb, stairs, pedestrian etc.
+3. Traversability prediction: Predict whether the robot can safely drive through an area. Output is often a traversability score or binary decision.
+4. Terrain classification: Classify terrain types like sidewalk, gravel, grass, mud, stairs, wet pavement.
+5. Visual odometry: Estimating robot motion using camera images instead of wheel encoders
+7. Local costmap prediction
+8. Failure prediction
 
 ## Offline evaluation
 This is about evaluating the model on static datasets before simulation or deployment.
@@ -299,10 +364,12 @@ This is about evaluating the model on static datasets before simulation or deplo
 
 Metrics like the following should be tracked:
 * precision / recall
+* train loss
+* evaluation accuracy and evaluation loss
 * mAP: Mean Average Precision
 * IoU: Intersection over Union. Measures overlap between prediction and ground truth.
-* calibration error
-* false traversable rate: Percentage of truly unsage areas incorrectly predicted as traverseable.
+* Calibration error
+* False traversable rate: Percentage of truly unsage areas incorrectly predicted as traverseable.
 * false obstacle rate: Percentage of safe areas incorrectly predicted as obstacles. Causes unecessary avoidance and inefficiency.
 * terrain class accuracy
 * colission prediction error
@@ -314,7 +381,7 @@ This is robotics specific stage that most MLOps pipelines lack.
 
 There are two options here:
 1. Feed recorded logs (video feed, lidar IMU planner state camera, commands) through the new model
-2. Simulation evaluation where the robot is evaluated inside a sunthetic or reconstructed environment.
+2. Simulation evaluation where the robot is evaluated inside a synthetic or reconstructed environment.
 
 We want to answer questions like:
 1. Would the new model have made better predictions on real historical data?
@@ -335,10 +402,10 @@ Hardening rollouts. These are certain release gates that the molde should pass b
 Before rolloing out to the entire fleet
 1. 1 robot internal testing
 2. shadow mode
-3. small canary fleet
-4. sepcific geography
-5. larger fleet percentage
-6. full deployment
+3. Small canary/pilot fleet: Canary fleet could be segmented by risk (???)
+4. Regional subset e.g. 50 robots in area X
+5. Larger fleet percentage (25% of the fleet, 50% of the fleet, 60% of the fleet etc)
+6. Full deployment
 
 Deployment must include:
 1. model artifacts
@@ -356,12 +423,18 @@ ML Monitoring
 4. Model errors
 
 Robot monitoring;
-1. Intervention rate
+1. (Operator) intervention rate
 2. Stuck rate
 3. Collisions / near-collision events
 4. Localization failures
 5. CPU/GPU mem usage
 6. Network upload backlog
+7. Fall rate
+8. Battery impact
+9. Crashes/restarts
+10. Operator complaints
+11. Slip events
+12. Generic error tracking
 
 Production quality is measured by full task outcomes not just model outcomes.
 
@@ -383,6 +456,9 @@ We can fine-tune soecific for the failure cases:
 6. Evaluate
 7. Redeploy
 
+### Rollback
+Every robot should retain a copy of its last working policy locally whose deployment can be triggered under certain events.
+
 ### Instead of a summary
 The MLOps pipeline focuses on:
 1. data collection
@@ -396,11 +472,113 @@ The MLOps pipeline focuses on:
 The points in-between are mostly detailed/expanded phases or robotics-related phases.
 
 ---------------------------------------
+# MLOps pipeline for a Locomotion RL policy
+Before we start: Locomotion is the act of moving from one place to another.
+The expected steps for deploying and maintaining a locomotion ML policy are the following - in similar fashion the the general robotics MLOps pipeline:
+1. Data generation in simulation - Isaac Sim
+2. Distributed training: Ray on PyTorch
+	* Data distribution
+	* Model distribution
+	* Pipeline distribution
+	* Fully sharded
+3. Experiment tracking
+4. Hyperparameter management (Hydra) (???)
+5. Checkpointing (???)
+6. Dataset versioning DVC
+7. Evaluation gates
+8. Promotion to production
+9. Rollback strategy
+
+---------------------------------------
+# Model Checkpoints
+A model checkpoint is a saved snapshot of a machine learning model at a specific point during training. The checkpoint is a snapshort of:
+* Model weights
+* Config
+
+They are useful for:
+1. Failure recovery
+2. Selecting the best model: It's not necessarily the model corresponding to the end of the training cycle the one with the best evaluation results
+3. Experimentation
+	* Compare different training runs
+	* Fine-tune from an existing model
+	* Rollback to an earlier version of the model
+4. Rollbacks: If for any reason deployed checkpoint A is failing on production, we can rollabck to checkpoint B which has been battle tested.
+
+---------------------------------------
+# Deep neural nets parallel training
+
+## One GPU for all
+CUDA underneath - or Apples metal shaders what whatever they are using
+
+## Data parallelism
+1. Each GPU has a full copy of the model
+2. Forward pass is identical on all GPUs and is performed independently. This step is where the loss is computed
+3. The gradients are synchronized: This synchronization is happening using different frameworks like 
+	* PyTorch DDP
+	* NCCL
+	* Horovod
+4. Once the gradients have been synchronized, the weights are identical on all GPUs
+
+This method represents 80-90% of the distributed training happening in production systems.
+
+## Model Parallelism
+1. Each GPUs is assigned a subset of the layers of the model
+	* GPU0:layers 1-10
+	* GPU1:layers 10-20
+	
+2. The control flow is: Input => GPU0 => GPU1 => output
+
+This approach is used when the model cannot fit into the memory of 1 GPU. I have never implemented such a parallelism.
+
+## Pipeline Parallelism
+```
+GPU1: Embeddings
+GPU2: Transformer blocks 1-12
+GPU3: Transformer blocks 13-24
+GPU4: Output head
+```
+
+This like the model parallelism but we are at the same time passing batches of data through each GPU
+
+G0 layers 0-10    b0.    b1     b2  b3
+G1 layers 10-15   None   b0     b1  b2
+G2 layers 15-20   None.  None   b0  b1 and so on
+
+## Hybrid: 3D Parallelism on data, model and parallelism
+Such hybrid models are deployed for frontier models deployments e.g. GPT4
+
+## Fully Sharded Data Parallel (FSDP)
+A modern alternative to Distributed Data Parallel. Instead of every GPU holding:
+* Model
+* Optimizer
+* Gradients
+
+each GPU stores only a shard
+```
+GPU1: 25%
+GPU2: 25%
+GPU3: 25%
+GPU4: 25%
+```
+and weights are gathered only when they are needed.
+
+* It enables much less memory consumption on larger models. e.g. 
+	1. https://docs.pytorch.org/docs/2.12/fsdp.html
+	2. Deep Speed 0: https://www.deepspeed.ai/tutorials/zero/?utm_source=chatgpt.com
+
+
+---------------------------------------
 # Questions to the panel
+5. You're looking for a senior engineer. Not a junior, not a principle. What are your expectations from such a hire in a horizon 1,3 and 6 months?
+6. What is the ballpark of data you're retrieving from every robot?
+8. What is the ballpark of the data you are processing and how often do you ingest data if you have no real time data ingestion.
+9. 
+7. What is the size of your robot fleet.
 1. Djibril asked me about knowledge of Java during the first inteview. Which parts of your stack are written in Java? Are you using it extensively?
 2. How severe is the friction due to research engineers not having the appropriate infrastructure to run their experiments?
 3. Tell me about your scaling plans: Eric mentioned that you performed 10k deliveries last year in the States. What is the plan for this year?
 4. I am currently a lead of the Platform team. Although I do not care about titles I want to know that there is the potential to grow into such a role here as well and work with multiple teams simultaneously.
+8. Are you expecting the engineer to be on standby for any reason?
 
 
 
